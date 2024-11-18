@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/madhur-banger/AWS-Resume-Portfolio/issues"
   },
-  "homepage": "https://github.com/madhur-banger/AWS-Resume-Portfolio#readme"
+  "homepage": "https://github.com/madhur-banger/AWS-Resume-Portfolio#readme",
+  "devDependencies": {
+    "cypress": "^13.15.2"
+  }
 }
