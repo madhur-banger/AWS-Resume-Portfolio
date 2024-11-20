@@ -27,19 +27,22 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Technical Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
 					
                 </ul>
             </div>
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
+            
+            
+           
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
                         Madhur
@@ -49,34 +52,21 @@
                         Delhi, India 
                         <br>
                         <a href="mailto:madhur.cloudevops@gmail.com">madhur.cloudevops@gmail.com</a>
+                        <br>
+                        <div class="visitor-counter">
+                            <span class="visitor-label">No. of visitors:</span>
+                            <span id="view-count" class="visitor-number">500</span>
+                        </div>
+                        
                     </div>
-                    <p class="lead mb-5">Software Engineer specializing in Cloud technologies and AI. Passionate about advancing my career as a Cloud Solutions Architect, DevOps, and FinOps professional, with a keen interest in delivering Enterprise AI solutions. Experienced in leading cloud-centric initiatives, including cost optimization, infrastructure management, and AI-driven solutions.  Demonstrated success in implementing transformative projects in cloud migration, data analytics, machine learning, and infrastructure automation. Skilled in optimizing processes, enhancing system performance, and delivering substantial cost savings and efficiency improvements across diverse industries.</p>
-                    <div class="visitor-counter">
-                        <span class="visitor-label">No. of visitors:</span>
-                        <span id="view-count" class="visitor-number">0</span>
-                    </div>
-                
-                    <div class="social-icons">
-						<a class="social-icon" href="https://www.linkedin.com/in/madhur-b-5539612a9/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-						<a class="social-icon" href="https://madhur-cloudevops.hashnode.dev/" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
-						<a class="social-icon" href="https://github.com/madhur-banger" target="_blank" title="GitHub Repo"><i class="fab fa-github"></i></a>
-                        <!-- <a class="social-icon" href="https://madhur-cloudevops.hashnode.dev/" target="_blank" title="Hashnode">
-                            <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png" alt="Hashnode" style="width: 24px; height: 24px;">
-                        </a> -->
-                        <!-- <a class="social-icon" href="https://www.youtube.com/@SruthiAnem" target="_blank" title="YouTube Channel"><i class="fab fa-youtube"></i></a> -->
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
+                    
+                   
                     <h2 class="mb-5">Technical Projects</h2>
                     
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Cloud Resume Challenge</h3>
-                            <p><h4>Description:</h4>Developed a fully functional and secure resume website as part of the Cloud Resume Challenge, utilizing AWS and modern web technologies. The project included creating a static resume page with HTML and CSS, deploying it on AWS S3, and using AWS CloudFront for content delivery. Implemented HTTPS communication and configured custom domain registration with Cloudflare. Integrated a visitor counter using JavaScript, which connects to AWS Lambda functions for backend processing and AWS DynamoDB for database storage. Applied infrastructure as code principles with Terraform and implemented CI/CD pipelines with GitHub Actions for seamless deployment.</p>
+                            <h3 class="mb-0">1. Portfolio Website</h3>
+                            <p><h4><a href="https://madhur.cloudevopsnow.com" target="_blank">Visit my website</a></h4>Developed a fully functional and secure resume website as part of the Cloud Resume Challenge, utilizing AWS and modern web technologies. The project included creating a static resume page with HTML and CSS, deploying it on AWS S3, and using AWS CloudFront for content delivery. Implemented HTTPS communication and configured custom domain registration with Cloudflare. Integrated a visitor counter using JavaScript, which connects to AWS Lambda functions for backend processing and AWS DynamoDB for database storage. Applied infrastructure as code principles with Terraform and implemented CI/CD pipelines with GitHub Actions for seamless deployment.</p>
 						<p><h4>Technologies Used:</h4> <!--HTML | CSS | JavaScript | Azure Storage | Azure CDN | AWS Cloudfront | Custom DNS (Cloudflare) | AWS DynamoDB | Azure Function Apps| Azure CosmosDB | AWS Lambda | Python | AWS CloudWatch | DataDog | Pager Duty | Infrastructure as Code (IaC) | GitHub Actions--></p>
                         <body>
                             <div class="container">
@@ -96,8 +86,8 @@
                     
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Multi-Threaded Proxy Server</h3>
-                            <p><h4>Description:</h4>
+                            <h3 class="mb-0">2. Multi-Threaded Proxy Server</h3>
+                            <p><h4><a href="https://github.com/madhur-banger/MultiThreadedProxyServerClient" target="_blank">Github Repo</a>:</h4>
                                 Designed and implemented a high-performance multi-threaded proxy server in C with caching and concurrency management. The server supports up to 400 simultaneous client connections using thread pools, semaphores, and mutexes to ensure synchronization and efficient resource usage. Implemented an LRU (Least Recently Used) cache for optimized response times, allowing the server to cache web resources and serve them efficiently. The project includes robust error handling for HTTP requests and responses (400, 403, 404, 500). This server is designed to handle GET requests and restrict access to specific websites. Extensible design for future functionalities like POST request handling. Developed with a focus on performance, scalability, and concurrency.
                             </p>
                             <p><h4>Technologies Used:</h4></p>
@@ -118,9 +108,9 @@
                     
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">IntelliOpt: Automated AWS Cost Optimization Suite</h3>
+                            <h3 class="mb-0">3. CloudWise: AWS Cost & Resource Manager</h3>
                             <p>
-                                <h4>Description:</h4>
+                                <h4><a href="https://github.com/madhur-banger/CloudWise-AWS-Cost-Resource-Manager" target="_blank">Github Repo</a>:</h4>
                                 Developed an automated cost optimization suite for AWS environments. 
                                 The project focuses on identifying and managing underutilized resources, 
                                 such as EC2 instances, orphaned EBS snapshots, and unused security groups. 
@@ -138,15 +128,29 @@
                                         <li><strong>Cloud Services:</strong> AWS EC2, AWS EBS, AWS CloudWatch, AWS EventBridge, AWS IAM</li>
                                         <li><strong>Infrastructure:</strong> Load Balancer (ALB), Auto Scaling Group (ASG), Nginx</li>
                                         <li><strong>Back End:</strong> Python (Boto3), AWS Lambda</li>
-                                        <li><strong>Automation:</strong> Terraform (IaC), AWS CLI</li>
-                                        <li><strong>Monitoring & Observability:</strong> AWS CloudWatch, AWS SNS</li>
-                                        <li><strong>DevOps:</strong> GitHub, GitHub Actions</li>
-                                        <li><strong>Database:</strong> AWS DynamoDB (if integrated for additional metrics)</li>
+                                        <li><strong>Automation:</strong> AWS CLI</li>
+                                        <li><strong>Monitoring & Observability:</strong> AWS CloudWatch</li>
+                                        <!-- <li><strong>DevOps:</strong> GitHub, GitHub Actions</li>
+                                        <li><strong>Database:</strong> AWS DynamoDB (if integrated for additional metrics)</li> -->
                                     </ul>
                                 </div>
                             </body>
                         </div>
                     </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-3">Fun Projects</h3>
+                            <p>
+                                <strong>1. <a href="https://edupathways.cloudevopsnow.com" target="_blank">Edupathways: An Education Platform</a></strong>
+                            </p>
+                            <p>
+                                <strong>2. <a href="https://gans.cloudevopsnow.com" target="_blank">BRAIN.AI</a></strong>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    
                     
                         <!-- <div class="flex-shrink-0"><span class="text-primary">January 2022 - September 2022</span></div> 
                     </div>
@@ -320,6 +324,18 @@
                     </ul>
                 </div>
             </section>
+
+             <!-- About-->
+             <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">About</span></h2>
+                    <p class="lead mb-5">Software Engineer specializing in Cloud technologies and AI. Passionate about advancing my career as a Cloud Solutions Architect, DevOps, and FinOps professional, with a keen interest in delivering Enterprise AI solutions. Experienced in leading cloud-centric initiatives, including cost optimization, infrastructure management, and AI-driven solutions.  Demonstrated success in implementing transformative projects in cloud migration, data analytics, machine learning, and infrastructure automation. Skilled in optimizing processes, enhancing system performance, and delivering substantial cost savings and efficiency improvements across diverse industries.</p>
+                   
+                
+                    
+                </div>
+            </section>
+            <hr class="m-0" />
             
 
 
