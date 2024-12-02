@@ -63,9 +63,32 @@
                    
                     <h2 class="mb-5">Technical Projects</h2>
                     
+                    
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">1. Portfolio Website</h3>
+                            <h3 class="mb-0">1. Kloudwise - Development to Deployment</h3>
+                            <p>
+                                <h4><a href="https://www.cloudevopsnow.com" target="_blank">Website</a>:</h4>
+                                Developed a SaaS platform using the MERN stack, designed for efficient cloud management and cost optimization. Hosted on Amazon S3 with CloudFront integration for enhanced performance and scalability, ensuring rapid content delivery across regions. The platform offers automated cloud cost optimization by identifying and deleting stalled AWS EBS volumes, sending real-time email notifications to users. It features pre-configured SaaS templates and a dedicated website deployment section, making cloud management accessible to non-technical users. Continuously enhancing the platform's functionality and user experience to meet the diverse needs of cloud users.
+                            </p>
+                            <p><h4>Technologies Used:</h4></p>
+                            <div class="container">
+                                <ul>
+                                    <li><strong>Programming Languages:</strong> JavaScript (Node.js, React)</li>
+                                    <li><strong>Cloud Services:</strong> AWS S3, CloudFront, Lambda</li>
+                                    <!-- <li><strong>Networking:</strong> RESTful APIs, Webhooks</li> -->
+                                    <!-- <li><strong>Automation:</strong> AWS Lambda, EventBridge</li>
+                                    <li><strong>Notifications:</strong> AWS SNS for Real-time Email Notifications</li> -->
+                                    <li><strong>Deployment:</strong> MERN Stack, Serverless Architecture</li>
+                                    <li><strong>Cost Optimization:</strong> Automated EBS Volume Cleanup</li>
+                                    <li><strong>UX/UI:</strong> Designed for non-technical users, with pre-configured templates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">2. Portfolio Website</h3>
                             <p><h4><a href="https://madhur.cloudevopsnow.com" target="_blank">Visit my website</a></h4>Developed a fully functional and secure resume website as part of the Cloud Resume Challenge, utilizing AWS and modern web technologies. The project included creating a static resume page with HTML and CSS, deploying it on AWS S3, and using AWS CloudFront for content delivery. Implemented HTTPS communication and configured custom domain registration with Cloudflare. Integrated a visitor counter using JavaScript, which connects to AWS Lambda functions for backend processing and AWS DynamoDB for database storage. Applied infrastructure as code principles with Terraform and implemented CI/CD pipelines with GitHub Actions for seamless deployment.</p>
 						<p><h4>Technologies Used:</h4> <!--HTML | CSS | JavaScript | Azure Storage | Azure CDN | AWS Cloudfront | Custom DNS (Cloudflare) | AWS DynamoDB | Azure Function Apps| Azure CosmosDB | AWS Lambda | Python | AWS CloudWatch | DataDog | Pager Duty | Infrastructure as Code (IaC) | GitHub Actions--></p>
                         <body>
@@ -86,55 +109,23 @@
                     
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">2. Multi-Threaded Proxy Server</h3>
-                            <p><h4><a href="https://github.com/madhur-banger/MultiThreadedProxyServerClient" target="_blank">Github Repo</a>:</h4>
-                                Designed and implemented a high-performance multi-threaded proxy server in C with caching and concurrency management. The server supports up to 400 simultaneous client connections using thread pools, semaphores, and mutexes to ensure synchronization and efficient resource usage. Implemented an LRU (Least Recently Used) cache for optimized response times, allowing the server to cache web resources and serve them efficiently. The project includes robust error handling for HTTP requests and responses (400, 403, 404, 500). This server is designed to handle GET requests and restrict access to specific websites. Extensible design for future functionalities like POST request handling. Developed with a focus on performance, scalability, and concurrency.
+                            <h3 class="mb-0">2. CloudWise: Automating EBS Volume Cleanup</h3>
+                            <p>
+                                <h4><a href="https://blog.costOptimisation" target="_blank">Blog</a>:</h4>
+                                Successfully developed and deployed a Python-based AWS Lambda function that identifies and deletes orphaned EBS volumes, resulting in a 22% reduction in monthly AWS infrastructure costs. The process is fully automated, scheduled to run monthly via EventBridge with a cron expression. Additionally, an SNS topic was created to send real-time email notifications regarding the status of snapshot deletions, ensuring transparency. Configured an IAM Role with precise permissions for EC2 operations and Lambda invocations to maintain secure operations. A second Lambda function was developed to format and publish notifications to the SNS topic, improving accountability and communication.
                             </p>
                             <p><h4>Technologies Used:</h4></p>
-                            <body>
-                                <div class="container">
-                                    <ul>
-                                        <li><strong>Programming Language:</strong> C</li>
-                                        <li><strong>Concurrency Management:</strong> Multithreading, Semaphores, Mutexes</li>
-                                        <li><strong>Networking:</strong> Socket Programming, HTTP Request Handling</li>
-                                        <li><strong>Caching:</strong> LRU Cache</li>
-                                        <li><strong>Testing and Debugging:</strong> Valgrind, GDB</li>
-                                        <li><strong>Performance:</strong> Designed for 400+ simultaneous client connections</li>
-                                    </ul>
-                                </div>
-                            </body>
-                        </div>
-                    </div>
-                    
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">3. CloudWise: AWS Cost & Resource Manager</h3>
-                            <p>
-                                <h4><a href="https://github.com/madhur-banger/CloudWise-AWS-Cost-Resource-Manager" target="_blank">Github Repo</a>:</h4>
-                                Developed an automated cost optimization suite for AWS environments. 
-                                The project focuses on identifying and managing underutilized resources, 
-                                such as EC2 instances, orphaned EBS snapshots, and unused security groups. 
-                                Integrated monitoring, notifications, and daily automated optimization 
-                                using AWS CloudWatch and EventBridge. Ensured production-readiness with 
-                                robust error handling, scalability, and advanced logging. Leveraged Terraform 
-                                for infrastructure as code to enhance scalability and maintainability.
-                            </p>
-                            <p>
-                                <h4>Technologies Used:</h4>
-                            </p>
-                            <body>
-                                <div class="container">
-                                    <ul>
-                                        <li><strong>Cloud Services:</strong> AWS EC2, AWS EBS, AWS CloudWatch, AWS EventBridge, AWS IAM</li>
-                                        <li><strong>Infrastructure:</strong> Load Balancer (ALB), Auto Scaling Group (ASG), Nginx</li>
-                                        <li><strong>Back End:</strong> Python (Boto3), AWS Lambda</li>
-                                        <li><strong>Automation:</strong> AWS CLI</li>
-                                        <li><strong>Monitoring & Observability:</strong> AWS CloudWatch</li>
-                                        <!-- <li><strong>DevOps:</strong> GitHub, GitHub Actions</li>
-                                        <li><strong>Database:</strong> AWS DynamoDB (if integrated for additional metrics)</li> -->
-                                    </ul>
-                                </div>
-                            </body>
+                            <div class="container">
+                                <ul>
+                                    <li><strong>Programming Language:</strong> Python</li>
+                                    <li><strong>Cloud Services:</strong> AWS Lambda, EventBridge, SNS, EC2</li>
+                                    <li><strong>Automation:</strong> Lambda-based EBS volume cleanup, Scheduled via EventBridge</li>
+                                    <li><strong>Notifications:</strong> SNS for real-time email notifications</li>
+                                    <li><strong>Security:</strong> IAM Role for EC2 and Lambda permissions</li>
+                                    <li><strong>Cost Optimization:</strong> Automated EBS cleanup reducing AWS costs by 22%</li>
+                                    <li><strong>Transparency:</strong> Lambda function to format and publish notifications to SNS</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -143,9 +134,9 @@
                             <p>
                                 <strong>1. <a href="https://todo.cloudevopsnow.com" target="_blank">Listify: Task Management App</a></strong>
                             </p>
-                            <p>
+                            <!-- <p>
                                 <strong>2. <a href="https://gans.cloudevopsnow.com" target="_blank">Brain.ai: Tumor Detection App</a></strong>
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                     
