@@ -1,35 +1,41 @@
-name: Deploy to S3 and Invalidate CloudFront Cache
+name: Deploy Frontend to S3
 
 on:
   push:
     branches:
-      - main  # Replace 'main' with your default branch if different
+      - main  # or your default branch
+    paths:
+      - 'frontend/**'  # Only trigger on changes to frontend folder
 
 jobs:
-  deploy:
+  deploy-frontend:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v4
 
-    - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v3
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
       with:
-        aws-access-key-id: "${{ secrets.AWS_ACCESS_KEY_ID }}"
-        aws-secret-access-key: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-        aws-region: "${{ secrets.AWS_REGION }}"
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1  # Replace with your preferred region
 
-    - name: Sync website files to S3
+    - name: Sync Frontend to S3
       run: |
-        aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME }} --delete
+        aws s3 sync ./frontend s3://${{ secrets.S3_BUCKET_NAME }} \
+          --delete \
+          --exclude ".DS_Store" \
+          --exclude "*.md" \
+          --cache-control "max-age=86400"
 
-    - name: Invalidate CloudFront cache
+    - name: CloudFront Cache Invalidation
       run: |
         aws cloudfront create-invalidation \
           --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
           --paths "/*"
 
-    - name: List S3 bucket contents (optional for verification)
+    - name: Verify S3 Upload
       run: |
         aws s3 ls s3://${{ secrets.S3_BUCKET_NAME }}
