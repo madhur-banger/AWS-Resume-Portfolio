@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 async function initializeViewCounter() {
-    const API_URL = "https://0ow2l7wz4c.execute-api.us-east-1.amazonaws.com/Prod/visitors";
+    const API_URL = "https://d327w8dtdd.execute-api.us-east-1.amazonaws.com/Prod/visitor";
     const counterElement = document.getElementById("view-count");
 
     try {
